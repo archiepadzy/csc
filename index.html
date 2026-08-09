@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Storage Company | Professional Abattoir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<meta name="description" content="Cold Storage Company LTD - Zimbabwe's leading abattoir and cold chain logistics provider. High-quality beef processing and industrial freezing.">
+<meta name="keywords" content="Beef, Zimbabwe, Abattoir, Bulawayo, Cold Storage, Meat Processing, CSC">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* Custom Styles for Sliders */
+        .facility-swiper, .compliance-swiper {
+            width: 100%;
+            padding: 20px 0 60px 0 !important; /* Extra space for pagination dots */
+        }
+        .swiper-slide {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: auto;
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            padding: 20px;
+        }
+        .compliance-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            height: 100%;
+        }
+
+        /* FIX: Make Swiper Arrows & Dots White for Blue Background */
+        :root {
+            --swiper-navigation-color: #ffffff;
+            --swiper-pagination-color: #ffffff;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 50%;
+            transform: scale(0.6);
+        }
+    </style>
+</head>
+<body class="bg-blue-900 text-gray-100 font-sans">
+
+<!-- Navigation: White background for Logo -->
+<nav class="bg-white text-slate-900 p-2 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#home" class="flex items-center">
+            <img src="csc-logo.png" alt="Cold Storage Company Logo" class="h-16 md:h-20 w-auto">
+        </a>
+        <ul class="hidden md:flex space-x-8 font-bold items-center text-sm uppercase tracking-wide">
+            <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+            <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+            <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
+            <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
+            <li><button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">Request Quote</button></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-2xl text-blue-600 p-2"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="relative h-[600px] flex items-center justify-center text-white">
+    <img src="cattle.jpg" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Cattle background"/>
+    <div class="relative z-10 text-center px-4">
+        <p class="text-blue-400 font-bold tracking-widest uppercase mb-2 animate-pulse">"Simply the best beef Worldwide"</p>
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Precision Processing.<br>Unbroken Cold Chain.</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Providing regional farmers and wholesalers with world-class abattoir services and industrial-grade cold storage solutions.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <button onclick="openQuoteModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition transform hover:scale-105">Book a Service</button>
+            <a href="#facility" class="bg-white hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold transition">View Our Facility</a>
+        </div>
+    </div>
+</header>
+
+<!-- Services Section -->
+<section id="services" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto mb-16"></div>
+        <div class="grid md:grid-cols-3 gap-8 text-slate-900">
+            <div class="bg-white p-8 rounded-xl shadow-lg transition hover:-translate-y-2">
+                <i class="fa-solid fa-cow text-4xl text-blue-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Humane Slaughter</h3>
+                <p class="text-gray-600 italic">State-of-the-art processing line following strict international standards.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg transition hover:-translate-y-2">
+                <i class="fa-solid fa-snowflake text-4xl text-blue-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Blast Freezing</h3>
+                <p class="text-gray-600 italic">Rapid chilling to lock in freshness at -30°C within hours.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg transition hover:-translate-y-2">
+                <i class="fa-solid fa-truck-ramp-box text-4xl text-blue-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Wholesale Storage</h3>
+                <p class="text-gray-600 italic">Bulk pallet storage for meat distributors with 24/7 monitored access.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Section -->
+<section id="products" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4">Our Premium Beef Products</h2>
+            <div class="w-24 h-1 bg-blue-400 mx-auto"></div>
+        </div>
+
+     <!-- Prime Steak Cuts Section -->
+<div>
+    <h3 class="text-2xl font-bold text-white mb-8 text-left flex items-center">
+        <i class="fa-solid fa-star text-yellow-400 mr-3"></i> Prime Steak Cuts 
+        <span class="ml-4 text-xs font-normal text-blue-200 uppercase tracking-widest bg-blue-800/50 px-3 py-1 rounded-full border border-blue-700">Price Per Kilogram (USD)</span>
+    </h3>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        
+        <!-- Beef Fillet -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="fillet.jpg" alt="Beef Fillet" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $5.50
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Beef Fillet</h4>
+                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Lean, tender, and vacuum sealed.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- T-Bone -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="tbone.jpg" alt="T-Bone Steak" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $6.00
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">T-Bone Steak</h4>
+                    <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Classic cut with bone-in flavor.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ribeye -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="ribeye.jpg" alt="Ribeye" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $4.75
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Prime Ribeye</h4>
+                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+	<!-- Brisket -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="brisket.jpg" alt="Brisket" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $4.75
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Brisket</h4>
+                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+	<!-- Topside -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="topside.jpg" alt="Topside" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $4.75
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Topside</h4>
+                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+	
+	<!-- Mince -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="mince.jpg" alt="Mince" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $4.75
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Mince</h4>
+                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sirloin -->
+        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+            <div class="h-48 overflow-hidden relative">
+                <img src="sirloin.jpg" alt="Sirloin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                    $5.90
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-lg">Sirloin Steak</h4>
+                    <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4 italic">Firm texture with amazing fat cap flavor.</p>
+                <div class="flex items-center justify-between border-t pt-4">
+                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pricing Disclaimer -->
+    <div class="bg-blue-800/30 border border-blue-700 p-4 rounded-xl text-center mb-20">
+        <p class="text-sm text-blue-200">
+            <i class="fa-solid fa-circle-info mr-2"></i> 
+            Prices are subject to change based on weekly market livestock rates. 
+            <span class="font-bold text-white underline ml-2 cursor-pointer" onclick="openQuoteModal()">Contact Sales for bulk wholesale rates.</span>
+        </p>
+    </div>
+</div>
+
+        <!-- Specialty Grid -->
+        <div class="bg-blue-800/40 p-10 rounded-2xl border border-blue-700 shadow-2xl">
+            <h3 class="text-2xl font-bold mb-8 flex items-center text-white italic"><i class="fa-solid fa-drumstick-bite text-blue-400 mr-3"></i> Specialty & Offal</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-blue-900/50 rounded-xl overflow-hidden border border-blue-700"><img src="oxtail.jpg" class="h-40 w-full object-cover"><div class="p-4"><h4 class="font-bold">Oxtail</h4></div></div>
+                <div class="bg-blue-900/50 rounded-xl overflow-hidden border border-blue-700"><img src="sausages.jpg" class="h-40 w-full object-cover"><div class="p-4"><h4 class="font-bold">Sausages</h4></div></div>
+                <div class="bg-blue-900/50 rounded-xl overflow-hidden border border-blue-700"><img src="liver.jpg" class="h-40 w-full object-cover"><div class="p-4"><h4 class="font-bold">Beef Liver</h4></div></div>
+                <div class="bg-blue-900/50 rounded-xl overflow-hidden border border-blue-700"><img src="tripe.jpg" class="h-40 w-full object-cover"><div class="p-4"><h4 class="font-bold">Prepared Tripe</h4></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facility Section -->
+<section id="facility" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-12">Our Facility</h2>
+        
+        <!-- Swiper Container -->
+        <div class="swiper facility-swiper relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="coldroom.jpg" class="w-full h-80 object-cover" alt="Chilling Room">
+                    <div class="slide-caption"><h4 class="font-bold">Chilling Room</h4></div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="processing.jpg" class="w-full h-80 object-cover" alt="Main Floor">
+                    <div class="slide-caption"><h4 class="font-bold">Main Processing Floor</h4></div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="freezer.jpg" class="w-full h-80 object-cover" alt="Blast Freezer">
+                    <div class="slide-caption"><h4 class="font-bold">Blast Freezing Facility</h4></div>
+                </div>
+		<div class="swiper-slide">
+                    <img src="chill.jpg" class="w-full h-80 object-cover" alt="Blast Freezer">
+                    <div class="slide-caption"><h4 class="font-bold">Blast Freezing Facility</h4></div>
+                </div>
+
+            </div>
+            <!-- Swiper Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Swiper Pagination Dots -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Compliance Section -->
+<section id="compliance" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-12 uppercase tracking-widest">Certified Standards</h2>
+        <div class="swiper compliance-swiper">
+            <div class="swiper-wrapper text-slate-900">
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-shield-check text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">HACCP</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-certificate text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">ISO 22000</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-file-medical text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Health Dept</h4></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Dedicated Contact Section -->
+<section id="contact" class="py-20 bg-transparent">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4">Contact Our Team</h2>
+            <p class="text-blue-200">Have questions? We're here to help you secure your cold chain.</p>
+            <div class="w-24 h-1 bg-blue-400 mx-auto mt-6"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            
+            <!-- Left Side: Contact Details -->
+            <div class="w-full lg:w-1/3 space-y-8">
+                <div class="bg-blue-800/50 p-8 rounded-2xl border border-blue-700 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-6">Reach Us Directly</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-lg"><i class="fa-solid fa-location-dot text-white"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Main Plant</h4>
+                                <p class="text-blue-200 text-sm italic">61-69 Birkenhead Road, Belmont, Bulawayo</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-lg"><i class="fa-solid fa-phone text-white"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Phone Lines</h4>
+                                <p class="text-blue-200 text-sm">+263 (9) 123 4567</p>
+                                <p class="text-blue-200 text-sm">+263 (9) 765 4321</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-lg"><i class="fa-solid fa-envelope text-white"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Email Support</h4>
+                                <p class="text-blue-200 text-sm">archibaldpadzinorima@gmail.com</p>
+                                //<p class="text-blue-200 text-sm">sales@coldstorage.co.zw</p>//
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-600 p-3 rounded-lg"><i class="fa-solid fa-clock text-white"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Business Hours</h4>
+                                <p class="text-blue-200 text-sm">Mon - Fri: 08:00 - 17:00</p>
+                                <p class="text-blue-200 text-sm">Sat: 08:00 - 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: The Form -->
+      		<form action="https://formspree.io/f/xdenkppw" method="POST" id="mainContactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+        <label class="block text-sm font-bold text-black-700 mb-2">Full Name</label>
+        <input type="text" name="Full Name" placeholder="John Doe" class="w-full p-4 border rounded-xl bg-gray-50 focus:outline-blue-600 shadow-sm" required>
+    </div>
+    <div>
+        <label class="block text-sm font-bold text-black-700 mb-2">Email Address</label>
+        <input type="email" name="Email" placeholder="john@example.com" class="w-full p-4 border rounded-xl bg-gray-50 focus:outline-blue-600 shadow-sm" required>
+    </div>
+    <div class="md:col-span-2">
+        <label class="block text-sm font-bold text-black-700 mb-2">Subject</label>
+        <input type="text" name="Subject" placeholder="e.g. Slaughter Schedule Inquiry" class="w-full p-4 border rounded-xl bg-gray-50 focus:outline-blue-600 shadow-sm" required>
+    </div>
+    <div class="md:col-span-2">
+        <label class="block text-sm font-bold text-gray-700 mb-2">Message</label>
+        <textarea name="Message" placeholder="How can we help you?" class="w-full p-4 border rounded-xl bg-gray-50 h-40 focus:outline-blue-600 shadow-sm" required></textarea>
+    </div>
+    <div class="md:col-span-2">
+        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition shadow-lg flex items-center justify-center space-x-2">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+</form>
+                    <div id="contactSuccess" class="hidden text-center py-10">
+                        <i class="fa-solid fa-circle-check text-6xl text-green-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-slate-900">Message Received!</h3>
+                        <p class="text-gray-600 mt-2">Thank you for contacting CSC. We will get back to you within 24 hours.</p>
+                        <button onclick="resetContactForm()" class="mt-6 text-blue-600 font-bold hover:underline">Send another message</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Map -->
+<div class="w-full h-96">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.991644785588!2d28.558690675537157!3d-20.17607338126839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb553ccc6c97af7%3A0xf471c02fd6cf9fcc!2sCSC!5e0!3m2!1sen!2szw!4v1785219244742!5m2!1sen!2szw" class="w-full h-full border-0 grayscale hover:grayscale-0 transition duration-500" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Footer: White background for Logo -->
+<footer class="bg-white text-slate-900 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <img src="csc-logo.png" alt="CSC Logo" class="h-24 w-auto mx-auto mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm mb-12 text-slate-600">
+            <div><h4 class="text-slate-900 font-bold mb-4 uppercase">Headquarters</h4><p>61-69 Birkenhead Road, Belmont, Bulawayo</p></div>
+            <div><h4 class="text-slate-900 font-bold mb-4 uppercase">Certifications</h4><p>HACCP Certified | Halal Authorized</p></div>
+            <div><h4 class="text-slate-900 font-bold mb-4 uppercase">Identity</h4><p>Proudly Zimbabwean 🇿🇼 | Global Exporters</p></div>
+        </div>
+        <div class="border-t border-gray-200 pt-8"><p class="text-gray-400 font-medium">&copy; Cold Storage Company LTD. All Rights Reserved.</p></div>
+    </div>
+</footer>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="closeQuoteModal()"></div>
+    <div class="relative bg-white w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden text-slate-900">
+        <div class="bg-blue-600 p-6 text-white flex justify-between items-center">
+            <h3 class="text-xl font-bold">Request a Wholesale Quote</h3>
+            <button onclick="closeQuoteModal()" class="text-white hover:text-blue-200 text-2xl">&times;</button>
+        </div>
+      <form action="https://formspree.io/f/xdenkppw" method="POST" class="p-8 space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="Customer Name" placeholder="Name" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
+        <input type="text" name="Company Name" placeholder="Company" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
+    </div>
+    <input type="email" name="Email" placeholder="Email" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
+    <select name="Interested Service" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
+        <option value="Bulk Beef">Bulk Beef Purchase</option>
+        <option value="Slaughter">Slaughter Services</option>
+        <option value="Cold Storage">Cold Storage Rental</option>
+    </select>
+    <textarea name="Requirements" placeholder="Requirements..." class="w-full border p-3 rounded-lg bg-gray-50 h-32 focus:outline-blue-600"></textarea>
+    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700">Submit Request</button>
+</form>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // 1. MOBILE MENU LOGIC
+    const menuBtn = document.getElementById('mobile-menu-button');
+    if(menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            alert("Mobile menu functionality coming soon!");
+        });
+    }
+
+    // 2. MODAL LOGIC
+    function openQuoteModal() {
+        const modal = document.getElementById('quoteModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeQuoteModal() {
+        const modal = document.getElementById('quoteModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto'; 
+    }
+
+    // 3. SLIDERS
+    new Swiper('.facility-swiper', {
+        slidesPerView: 1, spaceBetween: 20, loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    new Swiper('.compliance-swiper', {
+        slidesPerView: 1, spaceBetween: 20,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+</script>
+</body>
+</html>
