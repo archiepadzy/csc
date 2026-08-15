@@ -625,5 +625,26 @@
         breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
 </script>
+@keyframes whatsapp-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-button {
+    animation: whatsapp-pulse 2s infinite;
+}
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/263772123456?text=I%20am%20inquiring%20about%20Cold%20Storage%20services" 
+   target="_blank" 
+   class="fixed bottom-8 right-8 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-[999] hover:scale-110 transition-transform duration-300 whatsapp-button group">
+    
+    <!-- WhatsApp Icon -->
+    <i class="fa-brands fa-whatsapp text-4xl"></i>
+
+    <!-- Hover Tooltip -->
+    <span class="absolute right-full mr-4 bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl whitespace-nowrap pointer-events-none">
+        Chat with Sales
+    </span>
+</a>
 </body>
 </html>
