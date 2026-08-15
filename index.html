@@ -69,6 +69,12 @@
             <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
             <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
             <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
+            <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
+            <li><a href="#grading" class="hover:text-blue-600 transition">Grading</a></li> <!-- Add this -->
+            <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
+            <a href="#products" onclick="toggleMenu()" class="hover:text-blue-400">Products</a>
+            <a href="#grading" onclick="toggleMenu()" class="hover:text-blue-400">Grading</a> <!-- Add this -->
+            <a href="#facility" onclick="toggleMenu()" class="hover:text-blue-400">Our Facility</a>
             <li><button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">Request Quote</button></li>
         </ul>
         <button id="mobile-menu-button" class="md:hidden text-2xl text-blue-600 p-2"><i class="fa-solid fa-bars"></i></button>
@@ -424,6 +430,98 @@
             <div class="swiper-button-prev"></div>
             <!-- Swiper Pagination Dots -->
             <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Beef Grading Chart Section -->
+<section id="grading" class="py-20 bg-slate-50 border-y border-slate-200">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h4 class="text-blue-600 font-bold uppercase tracking-widest mb-2 text-sm">Quality Assurance</h4>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">CSC National Grading Standards</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">All livestock processed at our facility is graded by certified government inspectors to ensure transparency and quality for both farmers and retailers.</p>
+            <div class="w-24 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <!-- Desktop Table View -->
+        <div class="hidden md:block overflow-hidden rounded-2xl shadow-xl border border-slate-200 bg-white">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-slate-900 text-white">
+                    <tr>
+                        <th class="p-6 font-bold uppercase text-sm tracking-wider">Beef Grade</th>
+                        <th class="p-6 font-bold uppercase text-sm tracking-wider">Characteristics</th>
+                        <th class="p-6 font-bold uppercase text-sm tracking-wider">Fat Cover</th>
+                        <th class="p-6 font-bold uppercase text-sm tracking-wider text-center">Best Usage</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <!-- Super Grade -->
+                    <tr class="hover:bg-blue-50 transition">
+                        <td class="p-6">
+                            <span class="bg-yellow-500 text-white px-4 py-1 rounded-full font-black text-xs">SUPER</span>
+                        </td>
+                        <td class="p-6 text-slate-700 font-medium">Young cattle, grain-fed, excellent marbling and tenderness.</td>
+                        <td class="p-6 text-slate-500 italic">Firm white fat cover</td>
+                        <td class="p-6 text-center"><span class="text-slate-900 font-bold">Premium Steaks / Export</span></td>
+                    </tr>
+                    <!-- Choice Grade -->
+                    <tr class="hover:bg-blue-50 transition">
+                        <td class="p-6">
+                            <span class="bg-slate-400 text-white px-4 py-1 rounded-full font-black text-xs">CHOICE</span>
+                        </td>
+                        <td class="p-6 text-slate-700 font-medium">Prime quality animals, good muscle development and aging.</td>
+                        <td class="p-6 text-slate-500 italic">Medium fat cover</td>
+                        <td class="p-6 text-center"><span class="text-slate-900 font-bold">Retail Butcheries / BBQ</span></td>
+                    </tr>
+                    <!-- Commercial Grade -->
+                    <tr class="hover:bg-blue-50 transition">
+                        <td class="p-6">
+                            <span class="bg-green-600 text-white px-4 py-1 rounded-full font-black text-xs">COMMERCIAL</span>
+                        </td>
+                        <td class="p-6 text-slate-700 font-medium">Standard quality, older animals with good flavor profiles.</td>
+                        <td class="p-6 text-slate-500 italic">Light fat cover</td>
+                        <td class="p-6 text-center"><span class="text-slate-900 font-bold">Roasts / Value Packs</span></td>
+                    </tr>
+                    <!-- Economy Grade -->
+                    <tr class="hover:bg-blue-50 transition">
+                        <td class="p-6">
+                            <span class="bg-slate-700 text-white px-4 py-1 rounded-full font-black text-xs">ECONOMY</span>
+                        </td>
+                        <td class="p-6 text-slate-700 font-medium">Older cattle, leaner meat, very low fat content.</td>
+                        <td class="p-6 text-slate-500 italic">Minimal fat</td>
+                        <td class="p-6 text-center"><span class="text-slate-900 font-bold">Stews / Industrial Catering</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Mobile Card View (Shows on phones) -->
+        <div class="md:hidden space-y-4">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between mb-2"><span class="font-black text-yellow-600">SUPER</span><span class="font-bold">Premium Steaks</span></div>
+                <p class="text-sm text-slate-600">Young cattle, grain-fed. Best for exports and high-end restaurants.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between mb-2"><span class="font-black text-slate-400">CHOICE</span><span class="font-bold">Retail / BBQ</span></div>
+                <p class="text-sm text-slate-600">Prime quality with medium fat cover. Best for home retail.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between mb-2"><span class="font-black text-green-600">COMMERCIAL</span><span class="font-bold">Roasts / Value</span></div>
+                <p class="text-sm text-slate-600">Standard quality older animals. Best for roasts and stews.</p>
+            </div>
+        </div>
+
+        <!-- Certification Note -->
+        <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 opacity-75">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-stamp text-blue-600 text-2xl"></i>
+                <span class="font-bold text-slate-800 uppercase tracking-tighter">Government Inspected</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-scale-balanced text-blue-600 text-2xl"></i>
+                <span class="font-bold text-slate-800 uppercase tracking-tighter">Fair Market Pricing</span>
+            </div>
         </div>
     </div>
 </section>
