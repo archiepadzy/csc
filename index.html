@@ -751,15 +751,14 @@
         <input type="text" name="Company Name" placeholder="Company" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
     </div>
     <input type="email" name="Email" placeholder="Email" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
-    <select name="Interested Service" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
-        <option value="Bulk Beef">Bulk Beef Purchase</option>
-        <option value="Slaughter">Slaughter Services</option>
-        <option value="Cold Storage">Cold Storage Rental</option>
-        <option value="Bulk Beef">Bulk Beef Purchase</option>
-        <option value="Goat/Small Stock">Goat / Small Stock Purchase</option> <!-- Added -->
-        <option value="Slaughter">Slaughter Services (Beef/Goat)</option> <!-- Updated -->
-        <option value="Cold Storage">Cold Storage Rental</option>
-    </select>
+  <label class="block text-base font-extrabold text-slate-900 mb-2">Interested Service</label>
+<select name="Interested Service" class="w-full p-4 border-2 border-slate-400 rounded-xl bg-white text-black text-lg font-bold focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 shadow-sm">
+    <option value="Bulk Beef">Bulk Beef Purchase</option>
+    <option value="Goat/Small Stock">Goat / Small Stock Purchase</option>
+    <option value="Slaughter - Beef">Slaughter Services (Beef)</option>
+    <option value="Slaughter - Goat">Slaughter Services (Goat)</option>
+    <option value="Cold Storage">Cold Storage Rental</option>
+</select>
     <textarea name="Requirements" placeholder="Requirements..." class="w-full border p-3 rounded-lg bg-gray-50 h-32 focus:outline-blue-600"></textarea>
     <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700">Submit Request</button>
 </form>
