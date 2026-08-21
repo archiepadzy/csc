@@ -59,48 +59,44 @@
 <body class="bg-blue-900 text-gray-100 font-sans">
 
 <!-- Navigation -->
-<nav class="bg-white text-slate-900 p-2 sticky top-0 z-50 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-4">
-        
-        <!-- Logo on the LEFT (Brightness set to 125) -->
+<nav class="bg-white text-slate-900 p-4 sticky top-0 z-50 shadow-lg min-h-[100px] flex items-center">
+    <div class="container mx-auto flex justify-between items-center px-4 w-full">
+        <!-- Logo -->
         <a href="#home" class="flex items-center group">
-            <img src="csc-logo.png" 
-                 alt="Cold Storage Company Logo" 
-                 class="h-16 md:h-24 w-auto transition-all duration-300 transform group-hover:scale-105 brightness-125 contrast-125 drop-shadow-md">
+            <img src="csc-logo.png" alt="CSC Logo" class="h-20 md:h-28 w-auto transition-all transform group-hover:scale-105 brightness-125 contrast-125 drop-shadow-md">
         </a>
 
-        <!-- DESKTOP MENU on the RIGHT -->
-        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
             <ul class="flex space-x-6 lg:space-x-8 font-bold items-center text-sm uppercase tracking-wide">
                 <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
                 <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
                 <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
                 <li><a href="#grading" class="hover:text-blue-600 transition">Grading</a></li>
-                <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
+                <li><a href="#faq" class="hover:text-blue-600 transition font-black text-blue-600">Farmer FAQ</a></li>
             </ul>
-            <!-- Request Quote Button on the far right -->
             <button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md uppercase text-xs tracking-wider">
                 Request Quote
             </button>
         </div>
 
-        <!-- MOBILE HAMBURGER BUTTON on the RIGHT -->
-        <button id="mobile-menu-button" onclick="toggleMenu()" class="md:hidden text-2xl text-blue-600 p-2 focus:outline-none">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-3xl text-blue-600 p-2 focus:outline-none">
             <i class="fa-solid fa-bars"></i>
         </button>
     </div>
 
-    <!-- MOBILE MENU OVERLAY -->
-    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold text-white transition-all duration-300">
-        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-4xl">&times;</button>
-        <a href="#home" onclick="toggleMenu()" class="hover:text-blue-400">Home</a>
-        <a href="#about" onclick="toggleMenu()" class="hover:text-blue-400">About Us</a>
-        <a href="#services" onclick="toggleMenu()" class="hover:text-blue-400">Services</a>
-        <a href="#products" onclick="toggleMenu()" class="hover:text-blue-400">Products</a>
-        <a href="#grading" onclick="toggleMenu()" class="hover:text-blue-400">Grading</a>
-        <a href="#facility" onclick="toggleMenu()" class="hover:text-blue-400">Our Facility</a>
-        <button onclick="openQuoteModal(); toggleMenu();" class="bg-blue-600 px-8 py-3 rounded-full">Request Quote</button>
+    <!-- Mobile Menu Overlay (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 text-2xl font-bold text-white">
+        <button id="close-menu" class="absolute top-6 right-6 text-5xl">&times;</button>
+        <a href="#home" class="mobile-link hover:text-blue-400">Home</a>
+        <a href="#about" class="mobile-link hover:text-blue-400">About Us</a>
+        <a href="#services" class="mobile-link hover:text-blue-400">Services</a>
+        <a href="#products" class="mobile-link hover:text-blue-400">Products</a>
+        <a href="#grading" class="mobile-link hover:text-blue-400">Grading</a>
+        <a href="#faq" class="mobile-link hover:text-blue-400">Farmer's Corner</a>
+        <button onclick="openQuoteModal();" class="mobile-link bg-blue-600 px-8 py-3 rounded-full text-lg">Request Quote</button>
     </div>
 </nav>
 
@@ -209,6 +205,48 @@
                         Partner With Us
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- National Presence Section -->
+<section id="network" class="py-20 bg-slate-50 border-y border-slate-200">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Our National Network</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Strategically located facilities across Zimbabwe to serve farmers in every province.</p>
+            <div class="w-24 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Bulawayo HQ -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-600">
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Bulawayo (HQ)</h4>
+                <p class="text-xs text-blue-600 font-bold mb-3 uppercase tracking-tighter">Main Abattoir & Processing</p>
+                <p class="text-sm text-slate-500 mb-4 italic">61-69 Birkenhead Rd, Belmont</p>
+                <span class="text-xs font-bold text-green-600"><i class="fa-solid fa-circle-check"></i> FULLY OPERATIONAL</span>
+            </div>
+            <!-- Masvingo -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300">
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Masvingo</h4>
+                <p class="text-xs text-slate-400 font-bold mb-3 uppercase tracking-tighter">Regional Slaughter Center</p>
+                <p class="text-sm text-slate-500 mb-4 italic">Industrial Road Area</p>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Regional Hub</span>
+            </div>
+            <!-- Chinhoyi -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300">
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Chinhoyi</h4>
+                <p class="text-xs text-slate-400 font-bold mb-3 uppercase tracking-tighter">Collection & Dispatch</p>
+                <p class="text-sm text-slate-500 mb-4 italic">Cold Storage Industrial Area</p>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Collection Center</span>
+            </div>
+            <!-- Marondera -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300">
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Marondera</h4>
+                <p class="text-xs text-slate-400 font-bold mb-3 uppercase tracking-tighter">Distribution Point</p>
+                <p class="text-sm text-slate-500 mb-4 italic">Cold Storage Site</p>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Distribution Depot</span>
             </div>
         </div>
     </div>
@@ -918,16 +956,35 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
-    // 1. MOBILE MENU LOGIC
+    // MOBILE MENU LOGIC
+    const mobileMenu = document.getElementById('mobile-menu');
     const menuBtn = document.getElementById('mobile-menu-button');
-    if(menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            alert("Mobile menu functionality coming soon!");
-        });
+    const closeBtn = document.getElementById('close-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            document.body.style.overflow = 'auto';
+        }
     }
 
-    // 2. MODAL LOGIC
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu when any link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    // MODAL LOGIC (Request Quote)
     function openQuoteModal() {
         const modal = document.getElementById('quoteModal');
         modal.classList.remove('hidden');
@@ -941,21 +998,6 @@
         modal.classList.remove('flex');
         document.body.style.overflow = 'auto'; 
     }
-
-    // 3. SLIDERS
-    new Swiper('.facility-swiper', {
-        slidesPerView: 1, spaceBetween: 20, loop: true,
-        autoplay: { delay: 3000 },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-    });
-
-    new Swiper('.compliance-swiper', {
-        slidesPerView: 1, spaceBetween: 20,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-    });
 </script>
 
 <!-- Floating WhatsApp Button -->
