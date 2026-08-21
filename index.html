@@ -560,6 +560,41 @@
             </div>
         </div>
 
+        <!-- Wholesale Quarters Section -->
+<div class="container mx-auto px-4 mt-20 mb-20">
+    <div class="bg-slate-800/60 rounded-3xl p-8 md:p-12 border border-blue-700 shadow-2xl relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-center gap-12 relative z-10">
+            <div class="lg:w-1/2">
+                <h3 class="text-3xl font-bold text-white mb-4 flex items-center">
+                    <i class="fa-solid fa-boxes-stacked text-blue-400 mr-4"></i> Wholesale Beef Quarters
+                </h3>
+                <p class="text-blue-100 text-lg mb-8 leading-relaxed">Expertly dressed, graded by government inspectors, and chilled under strict temperature controls for retail partners.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-blue-900/50 p-4 rounded-xl border border-blue-800">
+                        <h4 class="text-blue-400 font-bold text-sm uppercase">Hindquarters</h4>
+                        <p class="text-white text-[10px]">Premium retail cuts (Fillet, Sirloin, T-Bone).</p>
+                    </div>
+                    <div class="bg-blue-900/50 p-4 rounded-xl border border-blue-800">
+                        <h4 class="text-blue-400 font-bold text-sm uppercase">Forequarters</h4>
+                        <p class="text-white text-[10px]">Ideal for roasts, stews, and mince production.</p>
+                    </div>
+                </div>
+                <button onclick="openQuoteModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition">Request Bulk Pricing</button>
+            </div>
+            <div class="lg:w-1/2 w-full grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-900">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                    <div class="h-32 bg-gray-200"><img src="hindquarter.jpg" class="w-full h-full object-cover"></div>
+                    <div class="p-4"><span class="text-xl font-black text-blue-600">$4.10/kg</span><p class="text-[10px] font-bold text-gray-400 uppercase">Hindquarter</p></div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                    <div class="h-32 bg-gray-200"><img src="forequarter.jpg" class="w-full h-full object-cover"></div>
+                    <div class="p-4"><span class="text-xl font-black text-blue-600">$3.65/kg</span><p class="text-[10px] font-bold text-gray-400 uppercase">Forequarter</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         <!-- Goat Meat Cuts -->
         <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
             <div class="h-56 overflow-hidden relative">
@@ -780,7 +815,7 @@
         </div>
 
         <!-- Certification Note -->
-        <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 opacity-75">
+        <div class.="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 opacity-75">
             <div class="flex items-center space-x-2">
                 <i class="fa-solid fa-stamp text-blue-600 text-2xl"></i>
                 <span class="font-bold text-slate-800 uppercase tracking-tighter">Government Inspected</span>
@@ -788,6 +823,30 @@
             <div class="flex items-center space-x-2">
                 <i class="fa-solid fa-scale-balanced text-blue-600 text-2xl"></i>
                 <span class="font-bold text-slate-800 uppercase tracking-tighter">Fair Market Pricing</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Farmer's FAQ Section -->
+<section id="faq" class="py-24 bg-white text-slate-900">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Farmer's Corner (FAQ)</h2>
+            <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+        <div class="space-y-6">
+            <div class="border-2 border-slate-100 rounded-2xl p-6 bg-slate-50">
+                <h4 class="text-lg font-bold mb-3 flex items-center text-blue-800">
+                    <i class="fa-solid fa-file-shield mr-3"></i> Required Paperwork?
+                </h4>
+                <p class="text-slate-600 text-sm ml-8">ZRP Stock Clearance Certificate and Veterinary Movement Permit are mandatory for all livestock.</p>
+            </div>
+            <div class="border-2 border-slate-100 rounded-2xl p-6 bg-slate-50">
+                <h4 class="text-lg font-bold mb-3 flex items-center text-blue-800">
+                    <i class="fa-solid fa-clock mr-3"></i> Intake Times?
+                </h4>
+                <p class="text-slate-600 text-sm ml-8">Mon - Fri, 07:30 AM to 03:00 PM. Please arrive early for vet inspections.</p>
             </div>
         </div>
     </div>
@@ -956,35 +1015,39 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-    // MOBILE MENU LOGIC
+    // 1. MOBILE MENU LOGIC
     const mobileMenu = document.getElementById('mobile-menu');
     const menuBtn = document.getElementById('mobile-menu-button');
     const closeBtn = document.getElementById('close-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     function toggleMenu() {
-        if (mobileMenu.classList.contains('translate-x-full')) {
-            mobileMenu.classList.remove('translate-x-full');
-            mobileMenu.classList.add('translate-x-0');
-            document.body.style.overflow = 'hidden';
+        // Toggle the 'hidden' class to show/hide the menu
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+            // Small delay to allow the transition to look smooth if using translate
+            setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
+            document.body.style.overflow = 'hidden'; 
         } else {
             mobileMenu.classList.add('translate-x-full');
-            mobileMenu.classList.remove('translate-x-0');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }, 300);
             document.body.style.overflow = 'auto';
         }
     }
 
-    menuBtn.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', toggleMenu);
+    if(menuBtn) menuBtn.addEventListener('click', toggleMenu);
+    if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
     
-    // Close menu when any link is clicked
     mobileLinks.forEach(link => {
         link.addEventListener('click', toggleMenu);
     });
 
-    // MODAL LOGIC (Request Quote)
+    // 2. MODAL LOGIC
     function openQuoteModal() {
         const modal = document.getElementById('quoteModal');
         modal.classList.remove('hidden');
@@ -998,6 +1061,21 @@
         modal.classList.remove('flex');
         document.body.style.overflow = 'auto'; 
     }
+
+    // 3. SLIDERS (Facility & Compliance)
+    new Swiper('.facility-swiper', {
+        slidesPerView: 1, spaceBetween: 20, loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    new Swiper('.compliance-swiper', {
+        slidesPerView: 1, spaceBetween: 20,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
 </script>
 
 <!-- Floating WhatsApp Button -->
