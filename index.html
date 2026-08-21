@@ -58,40 +58,47 @@
 </head>
 <body class="bg-blue-900 text-gray-100 font-sans">
 
-<!-- Logo in Navigation -->
-<a href="#home" class="flex items-center group">
-    <img src="csc-logo.png" 
-         alt="Cold Storage Company Logo" 
-         class="h-20 md:h-28 w-auto transition-all duration-300 transform group-hover:scale-105 brightness-110 contrast-110 drop-shadow-md">
-</a>
+<!-- Navigation -->
+<nav class="bg-white text-slate-900 p-2 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        
+        <!-- Logo on the LEFT -->
+        <a href="#home" class="flex items-center group">
+            <img src="csc-logo.png" 
+                 alt="Cold Storage Company Logo" 
+                 class="h-16 md:h-24 w-auto transition-all duration-300 transform group-hover:scale-105 brightness-110 contrast-110 drop-shadow-md">
+        </a>
 
-        <!-- DESKTOP MENU: Only shows on screens larger than 768px -->
-        <ul class="hidden md:flex space-x-6 lg:space-x-8 font-bold items-center text-sm uppercase tracking-wide">
-            <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
-            <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
-            <li><a href="#grading" class="hover:text-blue-600 transition">Grading</a></li>
-            <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
-            <li><button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">Request Quote</button></li>
-        </ul>
+        <!-- DESKTOP MENU on the RIGHT: Only shows on screens larger than 768px -->
+        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <ul class="flex space-x-6 lg:space-x-8 font-bold items-center text-sm uppercase tracking-wide">
+                <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition text-[10px] bg-slate-100 px-2 py-1 rounded">About</a></li>
+                <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+                <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
+                <li><a href="#grading" class="hover:text-blue-600 transition">Grading</a></li>
+                <li><a href="#facility" class="hover:text-blue-600 transition">Our Facility</a></li>
+            </ul>
+            <!-- Request Quote Button stays on the far right -->
+            <button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md uppercase text-xs tracking-wider">
+                Request Quote
+            </button>
+        </div>
 
-        <!-- MOBILE HAMBURGER BUTTON: Only shows on small screens -->
+        <!-- MOBILE HAMBURGER BUTTON on the RIGHT: Only shows on small screens -->
         <button id="mobile-menu-button" onclick="toggleMenu()" class="md:hidden text-2xl text-blue-600 p-2 focus:outline-none">
             <i class="fa-solid fa-bars"></i>
         </button>
     </div>
 
-    <!-- MOBILE MENU OVERLAY: This starts hidden and slides in when the button is clicked -->
+    <!-- MOBILE MENU OVERLAY: Slide-in menu for phones -->
     <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold text-white transition-all duration-300">
-        <!-- Close Button -->
         <button onclick="toggleMenu()" class="absolute top-6 right-6 text-4xl">&times;</button>
-        
         <a href="#home" onclick="toggleMenu()" class="hover:text-blue-400">Home</a>
-        <a href="#about" onclick="toggleMenu()" class="hover:text-blue-600 transition">About Us</a>
+        <a href="#about" onclick="toggleMenu()" class="hover:text-blue-400">About Us</a>
         <a href="#services" onclick="toggleMenu()" class="hover:text-blue-400">Services</a>
         <a href="#products" onclick="toggleMenu()" class="hover:text-blue-400">Products</a>
         <a href="#grading" onclick="toggleMenu()" class="hover:text-blue-400">Grading</a>
-        <a href="#distribution" onclick="toggleMenu()" class="hover:text-blue-400">Distribution</a>
         <a href="#facility" onclick="toggleMenu()" class="hover:text-blue-400">Our Facility</a>
         <button onclick="openQuoteModal(); toggleMenu();" class="bg-blue-600 px-8 py-3 rounded-full">Request Quote</button>
     </div>
