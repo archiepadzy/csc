@@ -77,16 +77,18 @@
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-            <ul class="flex space-x-6 lg:space-x-8 font-bold items-center text-sm uppercase tracking-wide">
+        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <ul class="flex space-x-5 lg:space-x-7 font-bold items-center text-sm uppercase tracking-wide">
                 <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+                <li><a href="#divisions" class="hover:text-blue-600 transition">Business Units</a></li>
                 <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
                 <li><a href="#products" class="hover:text-blue-600 transition">Products</a></li>
+                <li><a href="#network" class="hover:text-blue-600 transition">Footprint</a></li>
                 <li><a href="#grading" class="hover:text-blue-600 transition">Grading</a></li>
                 <li><a href="#faq" class="hover:text-blue-600 transition font-black text-blue-600">Farmer FAQ</a></li>
             </ul>
-            <button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md uppercase text-xs tracking-wider">
+            <button onclick="openQuoteModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md uppercase text-xs tracking-wider whitespace-nowrap">
                 Request Quote
             </button>
         </div>
@@ -98,12 +100,14 @@
     </div>
 
     <!-- Mobile Menu Overlay (Hidden by default) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 text-2xl font-bold text-white">
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900 z-[100] translate-x-full transition-transform duration-300 flex-col items-center justify-center space-y-6 text-2xl font-bold text-white">
         <button id="close-menu" class="absolute top-6 right-6 text-5xl">&times;</button>
         <a href="#home" class="mobile-link hover:text-blue-400">Home</a>
         <a href="#about" class="mobile-link hover:text-blue-400">About Us</a>
+        <a href="#divisions" class="mobile-link hover:text-blue-400">Business Units</a>
         <a href="#services" class="mobile-link hover:text-blue-400">Services</a>
         <a href="#products" class="mobile-link hover:text-blue-400">Products</a>
+        <a href="#network" class="mobile-link hover:text-blue-400">Footprint</a>
         <a href="#grading" class="mobile-link hover:text-blue-400">Grading</a>
         <a href="#faq" class="mobile-link hover:text-blue-400">Farmer's Corner</a>
         <button onclick="openQuoteModal();" class="mobile-link bg-blue-600 px-8 py-3 rounded-full text-lg">Request Quote</button>
@@ -114,11 +118,14 @@
 <header id="home" class="relative h-[600px] flex items-center justify-center text-white">
     <img src="cowws.jpg" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Cattle background"/>
     <div class="relative z-10 text-center px-4">
-        <p class="text-blue text-xl md:text-2xl font-black tracking-[0.3em] uppercase mb-4 animate-pulse drop-shadow-lg">
+        <p class="text-blue-300 text-sm md:text-base font-bold tracking-[0.35em] uppercase mb-3">
+            Quality &bull; Efficiency &bull; Sustainability
+        </p>
+        <p class="text-blue-100 text-xl md:text-2xl font-black tracking-[0.25em] uppercase mb-4 animate-pulse drop-shadow-lg">
             "Simply the best beef Worldwide"
         </p>
         <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Precision Processing.<br>Unbroken Cold Chain.</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Providing regional farmers and wholesalers with world-class abattoir services and industrial-grade cold storage solutions.</p>
+        <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Providing regional farmers and wholesalers with world-class abattoir services, integrated agro-industrial solutions, and industrial-grade cold storage.</p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
             <button onclick="openQuoteModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition transform hover:scale-105">Book a Service</button>
             <a href="#facility" class="bg-white hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold transition">View Our Facility</a>
@@ -135,7 +142,7 @@
             <div class="bg-white p-8 rounded-xl shadow-lg transition hover:-translate-y-2">
                 <i class="fa-solid fa-cow text-4xl text-blue-600 mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">Humane Slaughter</h3>
-              <p class="text-gray-600 italic">State-of-the-art processing for <span class="font-bold text-blue-600">Beef & Small Stock (Goats/Sheep)</span> following strict international standards.</p>
+                <p class="text-gray-600 italic">State-of-the-art processing for <span class="font-bold text-blue-600">Beef &amp; Small Stock (Goats/Sheep)</span> following strict international standards.</p>
             </div>
             <div class="bg-white p-8 rounded-xl shadow-lg transition hover:-translate-y-2">
                 <i class="fa-solid fa-snowflake text-4xl text-blue-600 mb-6"></i>
@@ -147,11 +154,11 @@
                 <h3 class="text-xl font-bold mb-4">Wholesale Storage</h3>
                 <p class="text-gray-600 italic">Bulk pallet storage for meat distributors with 24/7 monitored access.</p>
             </div>
-         
+        </div>
     </div>
 </section>
 
-<!-- About Us Section -->
+<!-- About Us & Company Overview Section -->
 <section id="about" class="py-24 bg-white overflow-hidden">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -172,16 +179,22 @@
 
             <!-- Content Side -->
             <div class="lg:w-1/2">
-                <h4 class="text-blue-600 font-black uppercase tracking-[0.2em] mb-4 text-sm">Our Heritage & Future</h4>
+                <h4 class="text-blue-600 font-black uppercase tracking-[0.2em] mb-4 text-sm">Company Overview &amp; Heritage</h4>
                 <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
                     The Backbone of the <span class="text-blue-600">Zimbabwean</span> Livestock Industry.
                 </h2>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed font-medium">
-                    The Cold Storage Company (CSC) Limited stands as a cornerstone of national agriculture. With our headquarters in Bulawayo, we have spent decades perfecting the art of meat processing and cold-chain management.
+                <p class="text-lg text-slate-700 mb-5 leading-relaxed font-medium">
+                    The Cold Storage Company (CSC) is a national livestock processing, meat handling, and agro-industrial enterprise managing one of Zimbabwe's most extensive portfolios of abattoirs, ranches, and commercial properties. With a footprint across major urban centres and rural agricultural zones, CSC plays a critical role in the livestock value chain—supporting food safety compliance, meat export readiness, and the delivery of essential slaughter, cold chain, and livestock finishing services.
                 </p>
-                <p class="text-slate-600 mb-10 leading-relaxed">
-                    Today, we are undergoing a massive technological revitalization. By combining our historic expertise with world-class HACCP-certified facilities and humane slaughter protocols, we provide an unbroken cold chain that ensures "Simply the Best Beef Worldwide" reaches local and global markets safely.
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Following five years under Corporate Rescue, managed sequentially by three Corporate Rescue Practitioners (CRPs), the Cold Storage Company officially exited corporate rescue on <span class="font-bold text-slate-900">1 October 2025</span>. Post-CRP operations focus primarily on delivering world-class hygienic slaughter services to farmers and commercial livestock suppliers while simultaneously rehabilitating key sections of the Bulawayo abattoir.
                 </p>
+
+                <!-- Growth Ambition Callout -->
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-xl mb-8">
+                    <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-1">Growth Ambition &bull; Vision 10 from 50 in 5</p>
+                    <p class="text-slate-800 font-bold text-base">Targeting USD 50 Million Revenue within Five Years.</p>
+                </div>
 
                 <!-- Stats/Pillars Mini-Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -191,7 +204,7 @@
                         </div>
                         <div>
                             <h5 class="font-bold text-slate-900 uppercase text-sm tracking-wide">Quality First</h5>
-                            <p class="text-xs text-slate-500 mt-1">Strict adherence to international ISO and Halal standards.</p>
+                            <p class="text-xs text-slate-500 mt-1">Strict adherence to international HACCP, ISO, and Halal standards.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
@@ -200,85 +213,297 @@
                         </div>
                         <div>
                             <h5 class="font-bold text-slate-900 uppercase text-sm tracking-wide">Farmer Support</h5>
-                            <p class="text-xs text-slate-500 mt-1">Providing fair market access to regional livestock producers.</p>
+                            <p class="text-xs text-slate-500 mt-1">Contributing to national herd rebuilding and fair market access.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12">
+                <div class="mt-10">
                     <button onclick="openQuoteModal()" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-black uppercase tracking-widest text-sm hover:bg-blue-600 transition shadow-xl">
                         Partner With Us
                     </button>
                 </div>
             </div>
         </div>
+
+        <!-- Vision, Mission, Core Values & Strategic Positioning -->
+        <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Vision -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-eye text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 uppercase tracking-wide mb-3">Our Vision</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    To be the first-choice livestock and meat company, consistently producing high-quality livestock and supplying meat and allied products of international standards.
+                </p>
+            </div>
+
+            <!-- Mission -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-bullseye text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 uppercase tracking-wide mb-3">Our Mission</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    To procure, process, and market high-quality meat and allied products using environmentally responsible processes that create value for customers, suppliers, employees, shareholders, and stakeholders, while contributing to national herd rebuilding and livestock development.
+                </p>
+            </div>
+
+            <!-- Core Values -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-gem text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 uppercase tracking-wide mb-3">Core Values</h3>
+                <ul class="space-y-3 text-slate-700 text-sm font-semibold">
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-3"></i> Quality</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-3"></i> Efficiency</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-3"></i> Sustainability</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Value Proposition & Strategic Positioning Banner -->
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-blue-900 text-white rounded-2xl p-8 shadow-xl flex items-start gap-5">
+                <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-handshake text-xl text-blue-200"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-black uppercase tracking-wider text-blue-300 mb-2">Value Proposition</h4>
+                    <p class="text-sm text-blue-100 leading-relaxed">
+                        CSC delivers integrated, end-to-end agro-industrial solutions—from livestock production and processing to infrastructure and market supply—ensuring quality, efficiency, and sustainability across the value chain.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-slate-900 text-white rounded-2xl p-8 shadow-xl flex items-start gap-5">
+                <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-chart-line text-xl text-blue-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-black uppercase tracking-wider text-blue-400 mb-2">Strategic Positioning</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        The Cold Storage Company remains a strategic national asset with strong growth potential, driven by Zimbabwe's livestock base and regional export opportunities. Its ongoing revival positions CSC to reclaim its leadership in the beef industry and contribute meaningfully to economic development.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- Our Business Units & Divisions Section -->
+<section id="divisions" class="py-24 bg-blue-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h4 class="text-blue-300 font-bold uppercase tracking-widest mb-2 text-sm">Integrated Agro-Industrial Operations</h4>
+            <h2 class="text-4xl font-bold text-white mb-4">Our Business Units &amp; Divisions</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto">Seven specialized divisions working together to deliver quality, efficiency, and sustainability across the entire livestock and agricultural value chain.</p>
+            <div class="w-24 h-1.5 bg-blue-400 mx-auto mt-6 rounded-full"></div>
+        </div>
 
-<!-- National Network Section (Updated with Harare) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-slate-900">
+            <!-- 1. Meats Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-drumstick-bite text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Meats Division</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Fresh, frozen, and processed meats</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Beef, Chicken, Fish, Chevon, Mutton &amp; Eggs</li>
+                </ul>
+            </div>
+
+            <!-- 2. Leather Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-layer-group text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Leather Division</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Wet blue hides</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Export supply of hides</li>
+                </ul>
+            </div>
+
+            <!-- 3. Property Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-building text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Property Management</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Commercial retail spaces</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Property development &amp; refurbishment</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Residential properties, ranches &amp; feedlots</li>
+                </ul>
+            </div>
+
+            <!-- 4. Canning Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-jar text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Canning Division</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Canned meats</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Canned pet food</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Canned vegetables</li>
+                </ul>
+            </div>
+
+            <!-- 5. Energy Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-gas-pump text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Energy Division</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Supply of petrol and diesel</li>
+                </ul>
+            </div>
+
+            <!-- 6. Agricultural Support Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-tractor text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Agricultural Support</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Livestock feed, chemicals &amp; veterinary products</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Fertilisers</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Farmer support &amp; development programmes</li>
+                </ul>
+            </div>
+
+            <!-- 7. Engineering Consultancy Division -->
+            <div class="bg-white rounded-2xl p-7 shadow-xl border-t-4 border-blue-500 hover:-translate-y-1 transition md:col-span-2 xl:col-span-2">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-gears text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-black uppercase tracking-wide mb-3">Engineering Consultancy</h3>
+                <ul class="text-sm text-slate-600 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Engineering design &amp; infrastructure layouts</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Project management</li>
+                    <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Maintenance &amp; technical support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- National Network & Geographical Spread Section -->
 <section id="network" class="py-24 bg-slate-50 border-y border-slate-200">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h4 class="text-blue-600 font-bold uppercase tracking-widest mb-2 text-sm">National Presence</h4>
-            <h2 class="text-4xl font-bold text-slate-900 mb-4">Our Network of Excellence</h2>
+            <h4 class="text-blue-600 font-bold uppercase tracking-widest mb-2 text-sm">Geographical Spread</h4>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Abattoirs, Processing Facilities &amp; Ranches</h2>
             <p class="text-slate-600 max-w-2xl mx-auto">Strategically positioned across Zimbabwe to ensure a reliable cold chain from farm to fork.</p>
             <div class="w-24 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <!-- Grid updated to 5 columns on extra-large screens -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <!-- Abattoirs & Processing Facilities -->
+        <h3 class="text-xl font-black text-slate-800 uppercase tracking-wider mb-6 flex items-center">
+            <i class="fa-solid fa-industry text-blue-600 mr-3"></i> Abattoirs &amp; Processing Facilities
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             
             <!-- 1. Bulawayo HQ -->
             <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-600 flex flex-col justify-between">
                 <div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Bulawayo (HQ)</h4>
-                    <p class="text-[10px] text-blue-600 font-black mb-3 uppercase tracking-tighter">Main Abattoir & Processing</p>
-                    <p class="text-xs text-slate-500 mb-4 italic">61-69 Birkenhead Rd, Belmont</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Bulawayo (HQ)</h4>
+                    <p class="text-[11px] text-blue-600 font-black mb-3 uppercase tracking-wider">Main Abattoir &amp; Processing</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">The Belmont headquarters is the largest CSC abattoir in the country, processing cattle for both domestic use and export initiatives.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">61-69 Birkenhead Rd, Belmont</p>
                 </div>
                 <span class="text-[10px] font-bold text-green-600 flex items-center"><i class="fa-solid fa-circle-check mr-1"></i> FULLY OPERATIONAL</span>
             </div>
 
-            <!-- 2. Harare Branch (NEW) -->
+            <!-- 2. Masvingo -->
             <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-500 flex flex-col justify-between">
                 <div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Harare</h4>
-                    <p class="text-[10px] text-blue-500 font-black mb-3 uppercase tracking-tighter">Distribution & Sales Hub</p>
-                    <p class="text-xs text-slate-500 mb-4 italic">185 Willowvale Road, Harare</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Masvingo</h4>
+                    <p class="text-[11px] text-blue-500 font-black mb-3 uppercase tracking-wider">Regional Slaughter Center</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">A key abattoir location positioned directly in the heart of Zimbabwe's highest cattle-producing province.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">Industrial Road Area</p>
                 </div>
-                <span class="text-[10px] font-bold text-green-600 flex items-center"><i class="fa-solid fa-circle-check mr-1"></i> FULLY OPERATIONAL</span>
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Regional Hub</span>
             </div>
 
-            <!-- 3. Masvingo -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300 flex flex-col justify-between">
+            <!-- 3. Kadoma -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-500 flex flex-col justify-between">
                 <div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Masvingo</h4>
-                    <p class="text-[10px] text-slate-400 font-black mb-3 uppercase tracking-tighter">Regional Slaughter Center</p>
-                    <p class="text-xs text-slate-500 mb-4 italic">Industrial Road Area</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Kadoma</h4>
+                    <p class="text-[11px] text-blue-500 font-black mb-3 uppercase tracking-wider">Beef &amp; Pork Processing</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">Services the central farming belt for both beef and pork processing and regional supply.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">Central Farming Belt</p>
                 </div>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Regional Hub</span>
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Regional Hub</span>
             </div>
 
             <!-- 4. Chinhoyi -->
             <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300 flex flex-col justify-between">
                 <div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Chinhoyi</h4>
-                    <p class="text-[10px] text-slate-400 font-black mb-3 uppercase tracking-tighter">Collection & Dispatch</p>
-                    <p class="text-xs text-slate-500 mb-4 italic">Cold Storage Industrial Area</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Chinhoyi</h4>
+                    <p class="text-[11px] text-slate-500 font-black mb-3 uppercase tracking-wider">Collection &amp; Dispatch</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">Strategically covers the northern and Mashonaland West livestock regions.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">Cold Storage Industrial Area</p>
                 </div>
                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Collection Center</span>
             </div>
 
-            <!-- 5. Marondera -->
+            <!-- 5. Harare -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-500 flex flex-col justify-between">
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Harare</h4>
+                    <p class="text-[11px] text-blue-500 font-black mb-3 uppercase tracking-wider">Meat Processing &amp; Sales Hub</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">Meat processing facility and northern distribution &amp; wholesale sales hub.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">185 Willowvale Road, Harare</p>
+                </div>
+                <span class="text-[10px] font-bold text-green-600 flex items-center"><i class="fa-solid fa-circle-check mr-1"></i> FULLY OPERATIONAL</span>
+            </div>
+
+            <!-- 6. Marondera -->
             <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-slate-300 flex flex-col justify-between">
                 <div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Marondera</h4>
-                    <p class="text-[10px] text-slate-400 font-black mb-3 uppercase tracking-tighter">Distribution Depot</p>
-                    <p class="text-xs text-slate-500 mb-4 italic">CSC Depot Site</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-1">Marondera</h4>
+                    <p class="text-[11px] text-slate-500 font-black mb-3 uppercase tracking-wider">Distribution Depot</p>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">Supports regional cold chain distribution and eastern farming corridor access.</p>
+                    <p class="text-xs text-slate-400 mb-4 italic">CSC Depot Site</p>
                 </div>
                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Distribution Point</span>
             </div>
+        </div>
 
+        <!-- Ranches & Feedlots -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 uppercase tracking-wide flex items-center">
+                        <i class="fa-solid fa-wheat-awn text-green-600 mr-3"></i> Ranches &amp; Feedlots
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-1">To supply and maintain the national herd, the company manages ranches nationwide, including:</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h4 class="font-black text-blue-700 text-xs uppercase tracking-widest mb-2">Matabeleland North</h4>
+                    <p class="text-slate-800 font-bold text-sm">Maphandeni &amp; Umguza Ranches</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h4 class="font-black text-blue-700 text-xs uppercase tracking-widest mb-2">Matabeleland South</h4>
+                    <p class="text-slate-800 font-bold text-sm">Dubane &amp; Willsgrove Ranches</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h4 class="font-black text-blue-700 text-xs uppercase tracking-widest mb-2">Masvingo</h4>
+                    <p class="text-slate-800 font-bold text-sm">Mushandike &amp; Chivumbuni Ranches</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h4 class="font-black text-blue-700 text-xs uppercase tracking-widest mb-2">Mashonaland West</h4>
+                    <p class="text-slate-800 font-bold text-sm">Darwendale Ranch</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -291,312 +516,307 @@
             <div class="w-24 h-1 bg-blue-400 mx-auto"></div>
         </div>
 
-     <!-- Prime Steak Cuts Section -->
-<div>
-    <h3 class="text-2xl font-bold text-white mb-8 text-left flex items-center">
-        <i class="fa-solid fa-star text-yellow-400 mr-3"></i> Prime Steak Cuts 
-        <span class="ml-4 text-xs font-normal text-blue-200 uppercase tracking-widest bg-blue-800/50 px-3 py-1 rounded-full border border-blue-700">Price Per Kilogram (USD)</span>
-    </h3>
+        <!-- Prime Steak Cuts Section -->
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-8 text-left flex items-center">
+                <i class="fa-solid fa-star text-yellow-400 mr-3"></i> Prime Steak Cuts 
+                <span class="ml-4 text-xs font-normal text-blue-200 uppercase tracking-widest bg-blue-800/50 px-3 py-1 rounded-full border border-blue-700">Price Per Kilogram (USD)</span>
+            </h3>
 
-    <!-- Product Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-        
-        <!-- Beef Fillet -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="fillet.jpg" alt="Beef Fillet" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $5.50
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                
+                <!-- Beef Fillet -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="fillet.jpg" alt="Beef Fillet" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $5.50
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Beef Fillet</h4>
+                            <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Lean, tender, and vacuum sealed.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- T-Bone -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="tbone.jpg" alt="T-Bone Steak" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $5.55
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">T-Bone Steak</h4>
+                            <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Classic cut with bone-in flavor.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Super Beef -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="super-beef.jpg" alt="Super Beef" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $6.59
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Super Beef</h4>
+                            <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brisket -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="brisket.jpg" alt="Brisket" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $4.75
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Brisket</h4>
+                            <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Rich flavor, ideal for slow roasting and braising.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topside -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="topside.jpg" alt="Topside" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $4.75
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Topside</h4>
+                            <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Lean, versatile cut for roasts and biltong.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mince -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="mince.jpg" alt="Mince" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $5.99
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Mince</h4>
+                            <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Freshly ground premium beef mince.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sirloin -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="sirloin.jpg" alt="Sirloin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $5.90
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Sirloin Steak</h4>
+                            <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Firm texture with amazing fat cap flavor.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Beef Fillet</h4>
-                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Lean, tender, and vacuum sealed.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
+
+            <!-- Pricing Disclaimer -->
+            <div class="bg-blue-800/30 border border-blue-700 p-4 rounded-xl text-center mb-20">
+                <p class="text-sm text-blue-200">
+                    <i class="fa-solid fa-circle-info mr-2"></i> 
+                    Prices are subject to change based on weekly market livestock rates. 
+                    <span class="font-bold text-white underline ml-2 cursor-pointer" onclick="openQuoteModal()">Contact Sales for bulk wholesale rates.</span>
+                </p>
             </div>
         </div>
 
-        <!-- T-Bone -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="tbone.jpg" alt="T-Bone Steak" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $5.55
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">T-Bone Steak</h4>
-                    <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Classic cut with bone-in flavor.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
+        <!-- Specialty & Offal Products Section -->
+        <div class="mt-20">
+            <h3 class="text-2xl font-bold text-white mb-8 text-left flex items-center">
+                <i class="fa-solid fa-drumstick-bite text-blue-400 mr-3"></i> Specialty, Fish &amp; Offal
+                <span class="ml-4 text-xs font-normal text-blue-200 uppercase tracking-widest bg-blue-800/50 px-3 py-1 rounded-full border border-blue-700">Daily Fresh Selection</span>
+            </h3>
 
-        <!-- Ribeye -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="super-beef.jpg" alt="Ribeye" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $6.59
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <!-- Oxtail -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="oxtail.jpg" alt="Beef Oxtail" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $4.50
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Premium Oxtail</h4>
+                            <span class="text-[10px] bg-gray-100 px-2 py-1 rounded font-bold uppercase text-gray-600 border">Gourmet</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Deep flavor, perfect for slow-braising.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Super Beef</h4>
-                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
 
-	<!-- Brisket -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="brisket.jpg" alt="Brisket" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $4.75
+                <!-- Beef Sausages -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="sausages.jpg" alt="Beef Sausages" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $4.50
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Beef Sausages</h4>
+                            <span class="text-[10px] bg-blue-100 px-2 py-1 rounded font-bold uppercase text-blue-600 border border-blue-200">CSC Recipe</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Traditional seasoning, high meat content.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Brisket</h4>
-                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
 
-	<!-- Topside -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="topside.jpg" alt="Topside" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $4.75
+                <!-- Beef Liver -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="liver.jpg" alt="Beef Liver" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $6.99
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Beef Liver</h4>
+                            <span class="text-[10px] bg-green-100 px-2 py-1 rounded font-bold uppercase text-green-600 border border-green-200">Fresh</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Nutrient-dense and strictly inspected.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Topside</h4>
-                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
 
-	
-	<!-- Mince -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="mince.jpg" alt="Mince" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $5.99
+                <!-- Fish -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="fish.jpg" alt="Fish" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $4.59
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Fish</h4>
+                            <span class="text-[10px] bg-green-100 px-2 py-1 rounded font-bold uppercase text-green-600 border border-green-200">Fresh</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Fresh and frozen cold-chain quality fish.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Mince</h4>
-                    <span class="text-xs text-green-600 font-bold uppercase">Super Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Highly marbled for maximum juiciness.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Qoute</button>
-                </div>
-            </div>
-        </div>
 
+                <!-- Prepared Tripe -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="tripe.jpg" alt="Tripe" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
+                            $2.49
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg">Prepared Tripe</h4>
+                            <span class="text-[10px] bg-yellow-100 px-2 py-1 rounded font-bold uppercase text-yellow-700 border border-yellow-200">Cleaned</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Fully cleaned and ready for cooking.</p>
+                        <div class="flex items-center justify-between border-t pt-4">
+                            <span class="text-sm font-bold text-slate-400">/ per kg</span>
+                            <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Sirloin -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="sirloin.jpg" alt="Sirloin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $5.90
-                </div>
             </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Sirloin Steak</h4>
-                    <span class="text-xs text-blue-600 font-bold uppercase">Choice Grade</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Firm texture with amazing fat cap flavor.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Pricing Disclaimer -->
-    <div class="bg-blue-800/30 border border-blue-700 p-4 rounded-xl text-center mb-20">
-        <p class="text-sm text-blue-200">
-            <i class="fa-solid fa-circle-info mr-2"></i> 
-            Prices are subject to change based on weekly market livestock rates. 
-            <span class="font-bold text-white underline ml-2 cursor-pointer" onclick="openQuoteModal()">Contact Sales for bulk wholesale rates.</span>
-        </p>
-    </div>
-</div>
-
-       <!-- Specialty & Offal Products Section -->
-<div class="mt-20">
-    <h3 class="text-2xl font-bold text-white mb-8 text-left flex items-center">
-        <i class="fa-solid fa-drumstick-bite text-blue-400 mr-3"></i> Specialty & Offal
-        <span class="ml-4 text-xs font-normal text-blue-200 uppercase tracking-widest bg-blue-800/50 px-3 py-1 rounded-full border border-blue-700">Daily Fresh Selection</span>
-    </h3>
-
-    
-    <!-- Product Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        
-        <!-- Oxtail -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="oxtail.jpg" alt="Beef Oxtail" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $4.50
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Premium Oxtail</h4>
-                    <span class="text-[10px] bg-gray-100 px-2 py-1 rounded font-bold uppercase text-gray-600 border">Gourmet</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Deep flavor, perfect for slow-braising.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Beef Sausages -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="sausages.jpg" alt="Beef Sausages" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $4.50
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Beef Sausages</h4>
-                    <span class="text-[10px] bg-blue-100 px-2 py-1 rounded font-bold uppercase text-blue-600 border border-blue-200">CSC Recipe</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Traditional seasoning, high meat content.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Beef Liver -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="liver.jpg" alt="Beef Liver" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $6.99
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Beef Liver</h4>
-                    <span class="text-[10px] bg-green-100 px-2 py-1 rounded font-bold uppercase text-green-600 border border-green-200">Fresh</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Nutrient-dense and strictly inspected.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
-
-         <!-- Beef Liver -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="fish.jpg" alt="Beef Liver" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $4.59
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Fish</h4>
-                    <span class="text-[10px] bg-green-100 px-2 py-1 rounded font-bold uppercase text-green-600 border border-green-200">Fresh</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Nutrient-dense and strictly inspected.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Prepared Tripe -->
-        <div class="group bg-white rounded-xl overflow-hidden shadow-2xl transition hover:-translate-y-2 text-slate-900">
-            <div class="h-48 overflow-hidden relative">
-                <img src="tripe.jpg" alt="Tripe" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-md font-bold shadow-lg">
-                    $2.49
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Prepared Tripe</h4>
-                    <span class="text-[10px] bg-yellow-100 px-2 py-1 rounded font-bold uppercase text-yellow-700 border border-yellow-200">Cleaned</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-4 italic">Fully cleaned and ready for cooking.</p>
-                <div class="flex items-center justify-between border-t pt-4">
-                    <span class="text-sm font-bold text-slate-400">/ per kg</span>
-                    <button onclick="openQuoteModal()" class="bg-slate-900 text-white text-xs px-4 py-2 rounded-lg hover:bg-blue-600 transition">Request Quote</button>
-                    
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
         </div>
     </div>
 </section>
 
-<!-- Goats & Small Stock Section (FULL 3-ITEM VERSION) -->
+<!-- Goats & Small Stock Section -->
 <section id="goats" class="py-24 bg-white">
     <div class="container mx-auto px-4">
         <!-- Section Heading -->
         <div class="text-left mb-12">
             <h3 class="text-3xl font-bold text-slate-900 flex items-center">
-                <i class="fa-solid fa-leaf text-green-600 mr-3"></i> Goat & Small Stock Division
+                <i class="fa-solid fa-leaf text-green-600 mr-3"></i> Goat &amp; Small Stock Division (Chevon &amp; Mutton)
             </h3>
             <div class="w-20 h-1 bg-green-500 mt-4"></div>
         </div>
 
-        <!-- 3-Column Grid (Ensures all info is kept) -->
+        <!-- 3-Column Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- 1. Whole Goat Carcass -->
@@ -650,7 +870,7 @@
     </div>
 </section>
 
-        <!-- Wholesale Quarters Section -->
+<!-- Wholesale Quarters Section -->
 <div class="container mx-auto px-4 mt-20 mb-20">
     <div class="bg-slate-800/60 rounded-3xl p-8 md:p-12 border border-blue-700 shadow-2xl relative overflow-hidden">
         <div class="flex flex-col lg:flex-row items-center gap-12 relative z-10">
@@ -673,11 +893,11 @@
             </div>
             <div class="lg:w-1/2 w-full grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-900">
                 <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
-                    <div class="h-32 bg-gray-200"><img src="csc-hindquarter.jpg" class="w-full h-full object-cover"></div>
+                    <div class="h-32 bg-gray-200"><img src="csc-hindquarter.jpg" alt="Beef Hindquarter" class="w-full h-full object-cover"></div>
                     <div class="p-4"><span class="text-xl font-black text-blue-600">$4.10/kg</span><p class="text-[10px] font-bold text-gray-400 uppercase">Hindquarter</p></div>
                 </div>
                 <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
-                    <div class="h-32 bg-gray-200"><img src="csc-forequarter.jpg" class="w-full h-full object-cover"></div>
+                    <div class="h-32 bg-gray-200"><img src="csc-forequarter.jpg" alt="Beef Forequarter" class="w-full h-full object-cover"></div>
                     <div class="p-4"><span class="text-xl font-black text-blue-600">$3.65/kg</span><p class="text-[10px] font-bold text-gray-400 uppercase">Forequarter</p></div>
                 </div>
             </div>
@@ -685,12 +905,12 @@
     </div>
 </div>
 
-<!-- Market Channel Distribution Section -->
+<!-- Market Channel Distribution & Our Clients Section -->
 <section id="distribution" class="py-20 bg-white">
     <div class="container mx-auto px-4 text-center">
         <!-- Section Header -->
         <div class="mb-16">
-            <h4 class="text-blue-600 font-bold uppercase tracking-widest mb-2 text-sm">Logistics & Reach</h4>
+            <h4 class="text-blue-600 font-bold uppercase tracking-widest mb-2 text-sm">Logistics &amp; Reach</h4>
             <h2 class="text-4xl font-bold text-slate-900 mb-4">Market Distribution Network</h2>
             <p class="text-slate-600 max-w-2xl mx-auto">Connecting premium Zimbabwean livestock to local and international markets through a sophisticated, temperature-controlled distribution network.</p>
             <div class="w-24 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
@@ -713,7 +933,7 @@
                 <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 -rotate-3">
                     <i class="fa-solid fa-hotel text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Hospitality & HORECA</h3>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Hospitality &amp; HORECA</h3>
                 <p class="text-sm text-slate-500 leading-relaxed">Customized butchery solutions for hotels, restaurants, and industrial catering companies across the SADC region.</p>
             </div>
 
@@ -735,6 +955,38 @@
                 <p class="text-sm text-slate-500 leading-relaxed">Reliable bulk supply contracts for government institutions, hospitals, and educational facilities.</p>
             </div>
 
+        </div>
+
+        <!-- Our Valued Clients -->
+        <div id="clients" class="mb-16 bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-200">
+            <h3 class="text-2xl font-black text-slate-900 uppercase tracking-wide mb-2">Our Valued Clients</h3>
+            <p class="text-sm text-slate-500 mb-8">Trusted by leading retail supermarkets, specialist butcheries, and wholesale partners across Zimbabwe.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-slate-800">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Wholesale Beef
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Kosher Butcheries
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> SPAR Bonsa
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Sai Mart
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> ND Butchery
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Budget Butchery
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Meat Hub
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store text-blue-600"></i> Nyama Farm
+                </div>
+            </div>
         </div>
 
         <!-- Logistics Highlight -->
@@ -780,11 +1032,10 @@
                     <img src="freezer.jpg" class="w-full h-80 object-cover" alt="Blast Freezer">
                     <div class="slide-caption"><h4 class="font-bold">Blast Freezing Facility</h4></div>
                 </div>
-		<div class="swiper-slide">
-                    <img src="chill.jpg" class="w-full h-80 object-cover" alt="Blast Freezer">
-                    <div class="slide-caption"><h4 class="font-bold">Blast Freezing Facility</h4></div>
+                <div class="swiper-slide">
+                    <img src="chill.jpg" class="w-full h-80 object-cover" alt="Cold Chain Storage">
+                    <div class="slide-caption"><h4 class="font-bold">Cold Chain Storage</h4></div>
                 </div>
-
             </div>
             <!-- Swiper Navigation Arrows -->
             <div class="swiper-button-next"></div>
@@ -860,21 +1111,21 @@
         <!-- Mobile Card View (Shows on phones) -->
         <div class="md:hidden space-y-4">
             <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <div class="flex justify-between mb-2"><span class="font-black text-yellow-600">SUPER</span><span class="font-bold">Premium Steaks</span></div>
+                <div class="flex justify-between mb-2"><span class="font-black text-yellow-600">SUPER</span><span class="font-bold text-slate-900">Premium Steaks</span></div>
                 <p class="text-sm text-slate-600">Young cattle, grain-fed. Best for exports and high-end restaurants.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <div class="flex justify-between mb-2"><span class="font-black text-slate-400">CHOICE</span><span class="font-bold">Retail / BBQ</span></div>
+                <div class="flex justify-between mb-2"><span class="font-black text-slate-500">CHOICE</span><span class="font-bold text-slate-900">Retail / BBQ</span></div>
                 <p class="text-sm text-slate-600">Prime quality with medium fat cover. Best for home retail.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <div class="flex justify-between mb-2"><span class="font-black text-green-600">COMMERCIAL</span><span class="font-bold">Roasts / Value</span></div>
+                <div class="flex justify-between mb-2"><span class="font-black text-green-600">COMMERCIAL</span><span class="font-bold text-slate-900">Roasts / Value</span></div>
                 <p class="text-sm text-slate-600">Standard quality older animals. Best for roasts and stews.</p>
             </div>
         </div>
 
         <!-- Certification Note -->
-        <div class.="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 opacity-75">
+        <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 opacity-75">
             <div class="flex items-center space-x-2">
                 <i class="fa-solid fa-stamp text-blue-600 text-2xl"></i>
                 <span class="font-bold text-slate-800 uppercase tracking-tighter">Government Inspected</span>
@@ -911,15 +1162,18 @@
     </div>
 </section>
 
-<!-- Compliance Section -->
+<!-- Compliance & Operational Commitments Section -->
 <section id="compliance" class="py-20">
     <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-12 uppercase tracking-widest">Certified Standards</h2>
+        <h2 class="text-3xl font-bold text-white mb-12 uppercase tracking-widest">Certified Standards &amp; Commitments</h2>
         <div class="swiper compliance-swiper">
             <div class="swiper-wrapper text-slate-900">
-                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-shield-check text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">HACCP</h4></div></div>
-                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-certificate text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">ISO 22000</h4></div></div>
-                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-file-medical text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Health Dept</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-shield-halved text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">HACCP &amp; Food Safety Compliance</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-certificate text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">ISO 22000 &amp; Quality Assurance</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-snowflake text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Cold Chain Excellence</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-leaf text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Sustainable Operations</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-people-group text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Community Commitment</h4></div></div>
+                <div class="swiper-slide"><div class="compliance-card"><i class="fa-solid fa-file-medical text-4xl text-blue-600 mb-4"></i><h4 class="font-bold">Health Dept &amp; Halal Authorized</h4></div></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -948,7 +1202,7 @@
                             <div class="bg-blue-600 p-3 rounded-lg group-hover:bg-white transition"><i class="fa-solid fa-location-dot text-white group-hover:text-blue-600"></i></div>
                             <div>
                                 <h4 class="font-bold">Main Plant</h4>
-                                <p class="text-blue-200 text-sm italic">61-69 Birkenhead Road,Belmont, Bulawayo</p>
+                                <p class="text-blue-200 text-sm italic">61–69 Birkenhead Road, Belmont, Bulawayo</p>
                                 <span class="text-[10px] text-blue-400 font-bold uppercase">Tap for Directions</span>
                             </div>
                         </div>
@@ -958,7 +1212,7 @@
                             <div class="bg-blue-600 p-3 rounded-lg"><i class="fa-solid fa-phone text-white"></i></div>
                             <div>
                                 <h4 class="font-bold">Phone Lines</h4>
-                                <p class="text-blue-200 text-sm">+263 9 2462591</p>
+                                <p class="text-blue-200 text-sm">+263 292 2462591</p>
                                 <p class="text-blue-200 text-sm">+263 713566414</p>
                             </div>
                         </div>
@@ -1008,7 +1262,7 @@
     </div>
 </section>
 
-<!-- Interactive Map Section (MOVED OUTSIDE ALL SLIDERS) -->
+<!-- Interactive Map Section -->
 <section id="location" class="relative w-full h-[500px] bg-slate-200 border-t border-slate-300">
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.991644785588!2d28.558690675537157!3d-20.17607338126839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb553ccc6c97af7%3A0xf471c02fd6cf9fcc!2sCSC!5e0!3m2!1sen!2szw!4v1785219244742!5m2!1sen!2szw" 
@@ -1021,7 +1275,7 @@
     <!-- Floating Map Card (Desktop) -->
     <div class="hidden lg:block absolute top-10 left-10 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 z-10 max-w-sm">
         <h4 class="font-black text-slate-900 uppercase tracking-tighter text-lg mb-2">Bulawayo Main Plant</h4>
-        <p class="text-slate-500 text-xs mb-4 font-medium">61-69 Birkenhead Road, Belmont Industrial Area, Bulawayo, Zimbabwe.</p>
+        <p class="text-slate-500 text-xs mb-4 font-medium">61–69 Birkenhead Road, Belmont Industrial Area, Bulawayo, Zimbabwe.</p>
         <a href="https://www.google.com/maps/dir//CSC+Bulawayo" target="_blank" class="inline-flex items-center justify-center w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-slate-900 transition">
             <i class="fa-solid fa-diamond-turn-right mr-2"></i> Get GPS Directions
         </a>
@@ -1038,7 +1292,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm mb-12 text-slate-600">
             <div>
                 <h4 class="text-slate-900 font-bold mb-4 uppercase">Headquarters</h4>
-                <p>61-69 Birkenhead Road, Belmont, Bulawayo</p>
+                <p>61–69 Birkenhead Road, Belmont, Bulawayo</p>
             </div>
             <div>
                 <h4 class="text-slate-900 font-bold mb-4 uppercase">Certifications</h4>
@@ -1049,8 +1303,7 @@
                 <p>Proudly Zimbabwean 🇿🇼 | Global Exporters</p>
             </div>
 
-           
-           <!-- Connect With Us Section -->
+            <!-- Connect With Us Section -->
             <div>
                 <h4 class="text-slate-900 font-bold mb-4 uppercase">Connect With Us</h4>
                 <div class="flex justify-center space-x-4">
@@ -1091,23 +1344,28 @@
             <h3 class="text-xl font-bold">Request a Wholesale Quote</h3>
             <button onclick="closeQuoteModal()" class="text-white hover:text-blue-200 text-2xl">&times;</button>
         </div>
-      <form action="https://formspree.io/f/xdenkppw" method="POST" class="p-8 space-y-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" name="Customer Name" placeholder="Name" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
-        <input type="text" name="Company Name" placeholder="Company" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
-    </div>
-    <input type="email" name="Email" placeholder="Email" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
-  <label class="block text-base font-extrabold text-slate-900 mb-2">Interested Service</label>
-<select name="Interested Service" class="w-full p-4 border-2 border-slate-400 rounded-xl bg-white text-black text-lg font-bold focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 shadow-sm">
-    <option value="Bulk Beef">Bulk Beef Purchase</option>
-    <option value="Goat/Small Stock">Goat / Small Stock Purchase</option>
-    <option value="Slaughter - Beef">Slaughter Services (Beef)</option>
-    <option value="Slaughter - Goat">Slaughter Services (Goat)</option>
-    <option value="Cold Storage">Cold Storage Rental</option>
-</select>
-    <textarea name="Requirements" placeholder="Requirements..." class="w-full border p-3 rounded-lg bg-gray-50 h-32 focus:outline-blue-600"></textarea>
-    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700">Submit Request</button>
-</form>
+        <form action="https://formspree.io/f/xdenkppw" method="POST" class="p-8 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="Customer Name" placeholder="Name" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
+                <input type="text" name="Company Name" placeholder="Company" class="border p-3 rounded-lg bg-gray-50 focus:outline-blue-600">
+            </div>
+            <input type="email" name="Email" placeholder="Email" class="w-full border p-3 rounded-lg bg-gray-50 focus:outline-blue-600" required>
+            <label class="block text-base font-extrabold text-slate-900 mb-2">Interested Service / Division</label>
+            <select name="Interested Service" class="w-full p-4 border-2 border-slate-400 rounded-xl bg-white text-black text-lg font-bold focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 shadow-sm">
+                <option value="Bulk Beef">Bulk Beef &amp; Meat Cuts</option>
+                <option value="Goat/Small Stock">Goat / Small Stock (Chevon &amp; Mutton)</option>
+                <option value="Slaughter - Beef">Slaughter Services (Beef)</option>
+                <option value="Slaughter - Goat">Slaughter Services (Goat)</option>
+                <option value="Cold Storage">Cold Storage Rental</option>
+                <option value="Leather Hides">Leather Division (Wet Blue / Export Hides)</option>
+                <option value="Property Management">Property &amp; Commercial Spaces</option>
+                <option value="Canning Division">Canning Division (Meats, Pet Food, Veg)</option>
+                <option value="Energy & Agro">Energy &amp; Agricultural Support</option>
+                <option value="Engineering Consultancy">Engineering Consultancy</option>
+            </select>
+            <textarea name="Requirements" placeholder="Requirements..." class="w-full border p-3 rounded-lg bg-gray-50 h-32 focus:outline-blue-600"></textarea>
+            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700">Submit Request</button>
+        </form>
     </div>
 </div>
 
@@ -1121,11 +1379,9 @@
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     function toggleMenu() {
-        // Toggle the 'hidden' class to show/hide the menu
         if (mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.remove('hidden');
             mobileMenu.classList.add('flex');
-            // Small delay to allow the transition to look smooth if using translate
             setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
             document.body.style.overflow = 'hidden'; 
         } else {
